@@ -1,0 +1,50 @@
+<div class="form">
+  <div class="form__header">
+    <h2>Welcome Back</h2>
+    <p>Login to your Account</p>
+  </div>
+  <div class="form__body">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmitForm()">
+      <div class="field">
+        <label class="label" for="email">Your Email</label>
+        <div class="control">
+          <input
+            type="email"
+            name="email"
+            class="input"
+            formControlName="identifier"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" for="password">Password</label>
+        <div class="control">
+          <input
+            type="password"
+            name="password"
+            class="input"
+            formControlName="password"
+          />
+        </div>
+      </div>
+
+      <ng-container *ngIf="loginError$ | async as errorMessage">
+        <p class="error-form">{{ errorMessage }}</p>
+      </ng-container>
+
+      <button type="submit" class="button is-success">
+        Login
+        <!-- <ng-container *ngIf="loadingLogin$ | async; else elseBlock">
+          ...Cargando
+        </ng-container> -->
+        <!-- <ng-template #elseBlock>Login</ng-template> -->
+      </button>
+    </form>
+  </div>
+  <div class="form__footer">
+    <p>
+      Don’t have an account?
+      <a [routerLink]="'/auth/signup'">Sign up here</a>
+    </p>
+  </div>
+</div>

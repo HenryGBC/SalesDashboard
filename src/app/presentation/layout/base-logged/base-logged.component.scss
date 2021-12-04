@@ -1,0 +1,9 @@
+.layout {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 3rem;
+  min-height: 100vh;
+  &__page {
+    padding: 4rem 0;
+  }
+}

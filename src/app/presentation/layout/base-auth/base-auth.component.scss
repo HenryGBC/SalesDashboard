@@ -1,0 +1,30 @@
+.auth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+
+  &__image {
+    background-color: #f1f1f1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-logo {
+      width: 220px;
+
+      h2 {
+        color: var(--primary-color);
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__form {
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,25 @@
+.form__header {
+  text-align: center;
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  p {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+
+  button {
+    width: 100%;
+  }
+  .form__footer {
+    text-align: center;
+    padding-top: 3rem;
+    border-top: 1px solid #d5d5d5;
+    margin-top: 4rem;
+    a {
+      color: var(--primary-color);
+    }
+  }
+}
